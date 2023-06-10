@@ -1,248 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lenn106 - GitHub Projects</title>
-  <style>
-    body {
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
+    <title>Google Maps Search</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #333;
+            color: #f5f5f5;
+        }
 
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #111;
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-    }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #444;
+            border-radius: 5px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-    .header {
-      background-color: #323232;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        h1 {
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
 
-    .header .back-button {
-      background: transparent;
-      border: none;
-      padding: 0;
-      margin-right: 10px;
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      background-image: url("https://tinypic.host/images/2023/05/27/image-removebg-preview-1.png");
-      background-size: cover;
-    }
+        p {
+            margin-bottom: 20px;
+        }
 
-    h1 {
-      padding: 20px;
-      background-color: #323232;
-      color: #ffffff;
-      margin: 0;
-      text-align: center;
-    }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #f5f5f5;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
-    }
+        input[type="text"] {
+            width: 380px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #777;
+            margin-bottom: 20px;
+            background-color: #555;
+            color: #f5f5f5;
+        }
 
-    .project {
-      margin-bottom: 30px;
-      background-color: #323232;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 800px;
-      width: 100%;
-    }
+        button {
+            padding: 10px 20px;
+            background-color: #222;
+            color: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    .project h2 {
-      margin-top: 0;
-    }
-
-    .project p {
-      margin-bottom: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      margin-right: 10px;
-      margin-bottom: 5px;
-    }
-
-    .invisible {
-      user-select: none;
-    }
-
-  </style>
+        button:hover {
+            background-color: #111;
+        }
+    </style>
 </head>
-
 <body>
-  <div id="particles-js"></div>
-  <div class="header">
-    <button class="back-button" onclick="window.location.href = 'https://lenn106.github.io'"></button>
-    <h1>GitHub Projects</h1>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>NeoMenu</h2>
-      <p>A now patched i-Ready hack that I developed on my own. The only use of its repository today is for UI.</p>
-      <div>
-        <a href="https://github.com/Lenn106/NeoMenu" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/NeoMenu" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>Hackwize</h2>
-      <p>A set of tools used to break and bypass Linewize for unrestricted computer access at school.</p>
-      <div>
-        <a href="https://github.com/Lenn106/Hackwize" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/Hackwize" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>Edu News</h2>
-      <p>A unblocked games website similar to fishme.me. Click the word "problems" on article 1.</p>
-      <div>
-        <a href="https://github.com/Lenn106/Edu-News" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/Edu-News" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>Google Maps Search</h1>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800,
-          },
-        },
-        color: {
-          value: "#ffffff",
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000",
-          },
-          polygon: {
-            nb_sides: 5,
-          },
-          image: {
-            src: "img/github.svg",
-            width: 100,
-            height: 100,
-          },
-        },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false,
-          },
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false,
-          },
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#ffffff",
-          opacity: 0.4,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200,
-          },
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: false,
-            mode: "repulse",
-          },
-          onclick: {
-            enable: false,
-            mode: "push",
-          },
-          resize: true,
-        },
-        modes: {
-          grab: {
-            distance: 400,
-            line_linked: {
-              opacity: 1,
+        <p><strong>Coordinates Format:</strong> Enter the latitude and longitude coordinates in decimal degrees format, separated by a comma. For example, <em>latitude,longitude</em>.</p>
+
+        <label for="coordinates">Enter latitude and longitude:</label>
+        <input type="text" id="coordinates" placeholder="latitude,longitude">
+        <button onclick="searchOnGoogleMaps()">Search</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+            particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800,
+                    },
+                },
+                color: {
+                    value: "#ffffff",
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000",
+                    },
+                    polygon: {
+                        nb_sides: 5,
+                    },
+                    image: {
+                        src: "img/github.svg",
+                        width: 100,
+                        height: 100,
+                    },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false,
+                    },
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false,
+                    },
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200,
+                    },
+                },
             },
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-          push: {
-            particles_nb: 4,
-          },
-          remove: {
-            particles_nb: 2,
-          },
-        },
-      },
-      retina_detect: true,
-    });
-  </script>
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false,
+                        mode: "repulse",
+                    },
+                    onclick: {
+                        enable: false,
+                        mode: "push",
+                    },
+                    resize: true,
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1,
+                        },
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3,
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4,
+                    },
+                    push: {
+                        particles_nb: 4,
+                    },
+                    remove: {
+                        particles_nb: 2,
+                    },
+                },
+            },
+            retina_detect: true,
+        });
 
+        function searchOnGoogleMaps() {
+            var coordinates = document.getElementById("coordinates").value.trim();
+            var searchURL = "https://www.google.com/maps/place/" + coordinates;
+            window.open(searchURL, '_blank');
+        }
+    </script>
 </body>
-
 </html>
